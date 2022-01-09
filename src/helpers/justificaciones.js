@@ -32,8 +32,8 @@ export const getEmailCreador = async (id) => {
 export const enviarMail = (id, to, msg, user, userId) =>
   emailjs
     .send(
-      "service_5w6hxjm",
-      "prueba_template",
+      "SERVICE_ID,
+      "TEMPLATE_NAME",
       {
         id_tarea: id,
         to_email: to,
@@ -41,7 +41,7 @@ export const enviarMail = (id, to, msg, user, userId) =>
         nombre_usuario: user,
         id_usuario: userId,
       },
-      "user_QCcmjdo44uID8BWw20Rb3"
+      "USER_ID"
     )
     .then(
       (response) => {
